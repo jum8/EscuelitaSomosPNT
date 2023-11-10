@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Locale;
+
 public class Beverage extends Product {
     private Double liters;
 
@@ -18,7 +20,7 @@ public class Beverage extends Product {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s /// Litros: %.2f ///  Precio: $%.0f",
+        return String.format(Locale.ENGLISH ,"Nombre: %s /// Litros: %.1f /// Precio: $%.0f",
                 this.getName(), this.getLiters(), this.getPrice());
     }
 }

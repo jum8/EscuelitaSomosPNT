@@ -5,17 +5,20 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ProductMaster productMaster = loadProducts();
+
+        productMaster.printSummary();
+
     }
 
-    List<Product> loadProducts() {
-        List<Product> products = new ArrayList<>();
+    static ProductMaster loadProducts() {
+        ProductMaster productMaster = new ProductMaster();
 
-        products.add(new Beverage("Coca-Cola Zero", 20.0, 1.5));
-        products.add(new Beverage("Coca-Cola", 18.0, 2.0));
-        products.add(new Toiletry("Shampoo Sedal", 20.0, "500ml"));
-        products.add(new Produce("Frutillas", 64.0, "kilo"));
+        productMaster.add(new Beverage("Coca-Cola Zero", 20.0, 1.5));
+        productMaster.add(new Beverage("Coca-Cola", 18.0, 1.5));
+        productMaster.add(new Toiletry("Shampoo Sedal", 19.0, "500ml"));
+        productMaster.add(new Produce("Frutillas", 64.0, "kilo"));
 
-        return  products;
+        return productMaster;
     }
 }

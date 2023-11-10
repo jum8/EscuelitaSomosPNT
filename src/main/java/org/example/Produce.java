@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Locale;
+
 public class Produce extends Product {
     private String unitOfSales;
 
@@ -18,7 +20,7 @@ public class Produce extends Product {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s ///  Precio: $%.0f /// Unidad de venta: %s",
+        return String.format(Locale.ENGLISH ,"Nombre: %s /// Precio: $%.0f /// Unidad de venta: %s",
                 this.getName(), this.getPrice(), this.getUnitOfSales());
     }
 }

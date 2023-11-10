@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Locale;
+
 public class Toiletry extends Product {
     private String content;
 
@@ -18,7 +20,7 @@ public class Toiletry extends Product {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s /// Contenido: %s ///  Precio: $%.0f",
+        return String.format(Locale.ENGLISH ,"Nombre: %s /// Contenido: %s /// Precio: $%.0f",
                 this.getName(), this.getContent(), this.getPrice());
     }
 }
